@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Exemplo</title>
+    <style>
+        /* Estilos Globais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7f6;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* 1. Cabeçalho (Header) */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        header nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        header nav ul li a:hover {
+            color: #1abc9c;
+        }
+
+        /* 2. O Resto (Corpo Principal / Main) */
+        main {
+            flex: 1;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+        }
+
+        .hero-section {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .hero-section h1 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .hero-section p {
+            line-height: 1.6;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #1abc9c;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #16a085;
+        }
+
+        aside {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        aside h3 {
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+
+        aside ul {
+            list-style: disc;
+            padding-left: 20px;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        /* Rodapé (Footer) */
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: auto;
+        }
+
+        /* Responsividade para celulares */
+        @media (max-width: 768px) {
+            main {
+                grid-template-columns: 1fr;
+            }
+            header {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <div class="logo">MeuSite.com</div>
+        <nav>
+            <ul>
+                <li><a href="#">Início</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li><a href="#">Serviços</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- O RESTO (CONTEÚDO PRINCIPAL) -->
+    <main>
+        <section class="hero-section">
+            <h1>Bem-vindo à nossa página principal!</h1>
+            <p>Este é o conteúdo principal do site (o "resto"). Aqui você pode colocar artigos, apresentações, imagens ou qualquer outra informação importante para os visitantes da sua página.</p>
+            <p>O layout foi estruturado utilizando conceitos modernos de CSS Grid e Flexbox, garantindo que ele se adapte bem tanto em computadores quanto em celulares.</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </section>
+
+        <aside>
+            <h3>Links Rápidos</h3>
+            <ul>
+                <li><a href="#" style="color: #333; text-decoration: none;">Últimas Notícias</a></li>
+                <li><a href="#" style="color: #333; text-decoration: none;">Dúvidas Frequentes</a></li>
+                <li><a href="#" style="color: #333; text-decoration: none;">Política de Privacidade</a></li>
+                <li><a href="#" style="color: #333; text-decoration: none;">Suporte Técnico</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer>
+        <p>&copy; 2026 MeuSite.com. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+</html>
